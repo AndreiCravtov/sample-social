@@ -1,6 +1,6 @@
 export default function MessagesPage() {
     return (
-        <div>
+        <div className="h-screen">
             DMs
         </div>
     )

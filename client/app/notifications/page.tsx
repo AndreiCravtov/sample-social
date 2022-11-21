@@ -1,6 +1,6 @@
 export default function NotificationsPage() {
     return (
-        <div>
+        <div className="h-screen">
             Notifications
         </div>
     )

@@ -15,7 +15,7 @@ export default function RootLayout({children}: {children: ReactNode}) {
                 <Sidebar />
 
                 {/* Content */}
-                <main className="flex-1">
+                <main className="flex-1 bg-zinc-300">
                     {children}
                 </main>
             </body>
