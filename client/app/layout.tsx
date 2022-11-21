@@ -9,7 +9,7 @@ export default function RootLayout({children}: RootLayoutProps) {
     return (
         <html lang="en">
             <head>
-                <title>Next app</title>
+                <title>Sample Social</title>
             </head>
             <body className="flex">
                 <Sidebar />
