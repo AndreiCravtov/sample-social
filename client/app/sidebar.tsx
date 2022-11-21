@@ -34,7 +34,7 @@ function SidebarButton(props: {href: string, icon: Icon, className?: string}) {
 
 export default function Sidebar() {
     return (
-        <aside className="w-14 min-h-fit h-screen flex flex-col bg-zinc-900">
+        <aside className="w-14 min-h-fit h-full overflow-auto no-scrollbar flex flex-col bg-zinc-900">
             {/* Logo */}
             <Link href="">
                 <div className="w-14 h-14 p-2">
@@ -52,8 +52,8 @@ export default function Sidebar() {
             <div className="flex-1"></div>
             
             {/* Navigation */}
-            <div className="w-14 h-14 p-2">
-                <div className="w-full h-full rounded-full bg-red-300"></div>
+            <div className="min-w-14 min-h-14 p-2">
+                <UserIcon className="w-full h-full p-2 rounded-full bg-red-400 stroke-zinc-100"></UserIcon>
             </div>
             <SidebarButton href="settings" icon={Icon.Cog} />
         </aside>

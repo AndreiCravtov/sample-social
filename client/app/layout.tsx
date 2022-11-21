@@ -11,7 +11,7 @@ export default function RootLayout({children}: RootLayoutProps) {
             <head>
                 <title>Sample Social</title>
             </head>
-            <body className="flex">
+            <body className="flex h-screen">
                 <Sidebar />
 
                 {/* Main content */}
