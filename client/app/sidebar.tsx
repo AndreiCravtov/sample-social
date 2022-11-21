@@ -45,7 +45,7 @@ export default function Sidebar() {
             {/* Navigation */}
             <SidebarButton href="" icon={Icon.Home} />
             <SidebarButton href="messages" icon={Icon.PaperAirplane} />
-            <SidebarButton href="user/USER_ID" icon={Icon.User} />
+            <SidebarButton href="USER_ID" icon={Icon.User} />
             <SidebarButton href="notifications" icon={Icon.Bell} />
 
             {/* Separator */}
