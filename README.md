@@ -28,3 +28,4 @@ FOR FUTURE: I should use Docker and Kubernetes for containerisation and microser
 FOR FUTURE: Use RabbitMQ for communication between microservices
 
 FOR FUTURE: This repo will provide the tools necessary to build and deploy the web app, with each microservice possibly on it's own server, however, for testing, all containers will be run on the same machine.
+FOR FUTURE: Look into Rasberry PI as developement servers
