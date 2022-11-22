@@ -13,17 +13,15 @@ module.exports = {
   plugins: [
     plugin(function({ addUtilities }) {
       addUtilities({
-        /** Hide scrollbar for Chrome, Safari and Opera */
-        ".no-scrollbar:-webkit-scrollbar": {
-          "display": "none"
-        },
-
-        /** Hide scrollbar for IE, Edge and Firefox */
-        ".no-scrollbar": {
+        /** Hide scrollbar */
+        ".scrollbar-none": {
           "-ms-overflow-style": "none", // IE and Edge
-          "scrollbar-width": "none" // Firefox
+          "scrollbar-width": "none", // Firefox
+          "&::-webkit-scrollbar": {
+            "display": "none" // Chrome, Safari and Opera
+          }
         }
-      })
+      }, ["responsive"])
     })
   ],
 }

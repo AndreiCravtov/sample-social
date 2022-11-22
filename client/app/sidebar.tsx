@@ -11,7 +11,7 @@ enum Icon {
 }
 
 function SidebarButton(props: {href: string, icon: Icon, className?: string}) {
-    const iconStyle="p-2 rounded-full transition-all ease-out duration-200 stroke-zinc-100 hover:bg-zinc-700 active:stroke-zinc-900 active:bg-zinc-100"
+    const iconStyle="w-full p-2 rounded-full transition-all ease-out duration-200 stroke-zinc-100 hover:bg-zinc-700 active:stroke-zinc-900 active:bg-zinc-100"
     
     function getIcon(icon: Icon, style: string) {
         switch (icon) {
@@ -34,7 +34,7 @@ function SidebarButton(props: {href: string, icon: Icon, className?: string}) {
 
 export default function Sidebar() {
     return (
-        <aside className="w-14 min-h-fit h-full overflow-auto no-scrollbar flex flex-col bg-zinc-900">
+        <aside className="w-14 min-h-fit h-full overflow-auto scrollbar-none flex flex-col bg-zinc-900">
             {/* Logo */}
             <Link href="">
                 <div className="w-14 h-14 p-2">
@@ -52,8 +52,8 @@ export default function Sidebar() {
             <div className="flex-1"></div>
             
             {/* Navigation */}
-            <div className="min-w-14 min-h-14 p-2">
-                <UserIcon className="w-full h-full p-2 rounded-full bg-red-400 stroke-zinc-100"></UserIcon>
+            <div className="w-14 h-14 p-2">
+                <UserIcon className="w-full p-2 rounded-full stroke-zinc-100 bg-red-400"></UserIcon>
             </div>
             <SidebarButton href="settings" icon={Icon.Cog} />
         </aside>
