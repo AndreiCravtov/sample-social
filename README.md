@@ -1,15 +1,17 @@
 # Sample Social
-A sample social media website. It is a full stack website using React for the front end, Spring Boot for the back end, and GraphQL for the API.
+A sample social media website. It is a full stack website using Next.js for the front end and Spring Boot for the back end.
+I used GraphQL for the API.
+FOR FUTURE: This repository is a monorepo managed by the Nx build system.
 
 ## Front end:
-React + TS + Vite
-tailwindcss + some sort of compronent library
-Apollo client GraphQL
+Next.js
+Tailwindcss + Headless UI
+Apollo GraphQL client
 
 ## Back end:
 Spring Boot
 GraphQL
-MySQL
+PostgreSQL
 
 ## Project structure:
 ```
@@ -22,6 +24,7 @@ sample-social/
     frontend goes here
 ```
 
-when building, common is copied into both client and server
-client frontend is built to the static folder in the server
-when server is run, it serves the react app to the user
+FOR FUTURE: I should use Docker and Kubernetes for containerisation and microservice management.
+FOR FUTURE: Use RabbitMQ for communication between microservices
+
+FOR FUTURE: This repo will provide the tools necessary to build and deploy the web app, with each microservice possibly on it's own server, however, for testing, all containers will be run on the same machine.
