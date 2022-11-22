@@ -1,32 +1,12 @@
-import { HomeIcon, PaperAirplaneIcon, UserIcon, BellIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
 import Link from 'next/link';
 import Logo from '../assets/logo';
+import Icon, {IconType} from './components/primitives/icon';
 
-enum Icon {
-    Home,
-    PaperAirplane,
-    User,
-    Bell,
-    Cog
-}
-
-function SidebarButton(props: {href: string, icon: Icon, className?: string}) {
-    const iconStyle="w-full p-2 rounded-full transition-all ease-out duration-200 stroke-zinc-100 hover:bg-zinc-700 active:stroke-zinc-900 active:bg-zinc-100"
-    
-    function getIcon(icon: Icon, style: string) {
-        switch (icon) {
-            case Icon.Home: return <HomeIcon className={style} />
-            case Icon.PaperAirplane: return <PaperAirplaneIcon className={style} />
-            case Icon.User: return <UserIcon className={style} />
-            case Icon.Bell: return <BellIcon className={style} />
-            case Icon.Cog: return <Cog6ToothIcon className={style} />
-        }
-    }
-
+function SidebarButton(props: {href: string, icon: IconType, className?: string}) {
     return (
         <Link href={props.href} className={props.className}>
             <div className="w-14 h-14 p-2">
-                {getIcon(props.icon, iconStyle)}
+                <Icon type={props.icon} className="w-full p-2 rounded-full transition-all ease-out duration-200 stroke-zinc-100 hover:bg-zinc-700 active:stroke-zinc-900 active:bg-zinc-100"></Icon>
             </div>
         </Link>
     )
@@ -43,19 +23,19 @@ export default function Sidebar() {
             </Link>
 
             {/* Navigation */}
-            <SidebarButton href="" icon={Icon.Home} />
-            <SidebarButton href="messages" icon={Icon.PaperAirplane} />
-            <SidebarButton href="USER_ID" icon={Icon.User} />
-            <SidebarButton href="notifications" icon={Icon.Bell} />
+            <SidebarButton href="" icon="home" />
+            <SidebarButton href="messages" icon="paper-airplane" />
+            <SidebarButton href="USER_ID" icon="user" />
+            <SidebarButton href="notifications" icon="bell" />
 
             {/* Separator */}
             <div className="flex-1"></div>
             
             {/* Navigation */}
             <div className="w-14 h-14 p-2">
-                <UserIcon className="w-full p-2 rounded-full stroke-zinc-100 bg-red-400"></UserIcon>
+                <Icon type="user" className="w-full p-2 rounded-full stroke-zinc-100 bg-red-400"></Icon>
             </div>
-            <SidebarButton href="settings" icon={Icon.Cog} />
+            <SidebarButton href="settings" icon="cog-6-tooth" />
         </aside>
     )
 }
